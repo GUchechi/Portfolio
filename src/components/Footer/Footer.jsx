@@ -6,9 +6,19 @@ import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
 import Gitub from "@iconscout/react-unicons/icons/uil-github";
 
 const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
+    return (
+        <div className="footer">
+          <img src={Wave} alt="" style={{ width: "100%" }} />
+          <div className="f-content">
+            <span>godswilluchendu7@gmail.com</span>
+            <div className="f-icons">
+              <Insta color="white" size={"3rem"} />
+              <Facebook color="white" size={"3rem"} />
+              <Gitub color="white" size={"3rem"} />
+            </div>
+          </div>
+        </div>
+      );
 }
 
 export default Footer
