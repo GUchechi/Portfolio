@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Contact.css'
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+    const form = useRef()
+    
+        
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_3234uo2', 'template_xh64nkc', form.current, '399w-kjmFhw-oiUI3')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
   return (
     <div className="contact-form" id="contact">
       {/* left side copy and paste from work section */}
