@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Projects.css'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import img6 from '../img/img6.png'
@@ -13,13 +13,16 @@ import Project4 from '../img/Project4.png'
 import Project5  from '../img/Project5.png'
 import Project6 from '../img/Project6.png'
 import 'swiper/css'
+import { themeContext } from '../Context'
 
 const Projects = () => {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
   return (
     <div className="project">
         {/* Heading */}
 
-        <span>Recent Projects</span>
+        <span style={{color: darkMode ? 'white' : ''}}>Recent Projects</span>
         <span>Portfolio</span>
 
         {/* Slider */}

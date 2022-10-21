@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Service.css'
 import HeartEmoji from '../../img/heartemoji.png'
 import Glasses from '../../img/glasses.png'
 import Humble from '../../img/humble.png'
 import Card from '../Card/Card'
+import { themeContext } from '../../Context'
 
 const Service = () => {
+    const theme = useContext(themeContext)
+    const darkMode = theme.state.darkMode;
   return (
     <div className="services">
         {/* left side */}
         <div className="awesome">
-            <span>My Awesome</span>
+            <span style={{color: darkMode ? 'white' : ''}}>My Awesome</span>
             <span>Skills</span>
-            <span>Lorem ipsum dolor sit, amet consectetur
+            <span  style={{color: darkMode ? 'white' : ''}}>Lorem ipsum dolor sit, amet consectetur
                 <br/>
             nemo tempora incidunt delectus sunt nostrum possimus commodi tota</span>
             <button className="button s-button">Download CV</button>
@@ -23,10 +26,11 @@ const Service = () => {
 
         {/* Right side */}
         <div className="cards">
-            <div style={{left: '14rem'}}>
+            <div style={{left: '14rem', color: darkMode ? 'white' : ''}}>
                 <Card 
                     emoji={HeartEmoji}
                     detail={'HTML, CSS, JavaScript'}
+                    style={{color: darkMode ? 'white' : ''}}
                 />
             </div>
             {/* Second card */}

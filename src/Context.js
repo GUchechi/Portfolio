@@ -1,25 +1,25 @@
 import React, { createContext, useReducer} from 'react';
 
-export const ThemeContext = createContext();
+export const themeContext = createContext();
 
-const initialiseState = { darkMode : 'true' };
+const initialState = {darkMode : false};
 
 const themeReducer = (state, action) => {
     switch (action.type) {
         case 'toggle':
-            return { darkMode : !state.darkMode };
+            return {darkMode : !state.darkMode};
             default:
                 return state;
     }
-}
+};
 
 
 export const ThemeProvider = ({children}) => {
-    const [state, dispatch] = useReducer(themeReducer,initialiseState);
+    const [state, dispatch] = useReducer(themeReducer,initialState);
     return (
-        <ThemeContext.Provider value={{state, dispatch}}>
+        <themeContext.Provider value={{state, dispatch}}>
             {children}
-        </ThemeContext.Provider>
+        </themeContext.Provider>
     )
 };
 

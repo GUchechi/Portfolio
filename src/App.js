@@ -8,13 +8,19 @@ import Navbar from './components/Navbar/Navbar';
 import Service from './components/Services/Service';
 import Testimonial from './components/Testimonial/Testimonial';
 import Work from './components/Works/Work';
-import { ThemeContext } from './Context';
+import { themeContext } from './Context';
 import Projects from './Projects/Projects';
 
 function App() {
-  const theme = useContext(ThemeContext)
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="App">
+    <div className="App"
+       style={{
+         background: darkMode ? "black" : "",
+         color: darkMode ? "white" : "",
+      }}
+    >
       <Navbar />
       <Intro />
       <Service />

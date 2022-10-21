@@ -12,6 +12,9 @@
     gap: 2rem;
 }
 
+.i-right{
+    flex: 1;
+}
 .i-name {
     display: flex;
     flex-direction: column;
@@ -66,7 +69,7 @@
 
 .i-right>* {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 }
 
 .i-right>:nth-child(1) {
