@@ -8,11 +8,13 @@ import Facebook from '../../img/Facebook.png'
 import { themeContext } from '../../Context'
 import { motion } from "framer-motion";
 
+
+
 const Work = () => {
     const theme = useContext(themeContext)
     const darkMode = theme.state.darkMode;
   return (
-    <div className="work">
+    <div className="work" id='Work'>
          {/* left side */}
          <div className="awesome">
             <span style={{color: darkMode ? 'white' : ''}}>Works and </span>

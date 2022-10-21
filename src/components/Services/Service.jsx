@@ -17,7 +17,7 @@ const Service = () => {
     type: "spring",
   };
   return (
-    <div className="services">
+    <div className="services" id='Services'>
         {/* left side */}
         <div className="awesome">
             <span style={{color: darkMode ? 'white' : ''}}>My Awesome</span>
@@ -41,7 +41,7 @@ const Service = () => {
                  style={{left: '14rem', color: darkMode ? 'white' : ''}}>
                 <Card 
                     emoji={HeartEmoji}
-                    detail={'HTML, CSS, JavaScript'}
+                    detail={'HTML, CSS, JavaScript,'}
                     style={{color: darkMode ? 'white' : ''}}
                 />
             </motion.div>

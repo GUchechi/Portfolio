@@ -22,7 +22,7 @@ const Intro = () => {
     const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode;
   return (
-    <div className="intro">
+    <div className="intro" id='Navbar'>
         <div className="i-left">
             <div className="i-name">
                 <span style={{color: darkMode ? 'white' : ''}}>Hi! I Am</span>

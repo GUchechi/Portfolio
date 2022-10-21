@@ -19,7 +19,7 @@ const Projects = () => {
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
   return (
-    <div className="project">
+    <div className="project" id='Project'>
         {/* Heading */}
 
         <span style={{color: darkMode ? 'white' : ''}}>Recent Projects</span>
