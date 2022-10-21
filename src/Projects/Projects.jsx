@@ -28,8 +28,8 @@ const Projects = () => {
         {/* Slider */}
 
         <Swiper
-          spaceBetween={30}
-          slidesPerView={3}
+          spaceBetween={1}
+          slidesPerView={1}
           grabCursor={true}
           className='project-slider'
         >
